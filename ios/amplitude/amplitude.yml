@@ -1,0 +1,133 @@
+package: com.mobidevelop.robovm.pods.amplitude
+include: [foundation, uikit, corelocation]
+framework: Amplitude
+clang_args: ['-x', 'objective-c']
+headers:
+    - AmplitudeFramework.h
+typedefs: {}
+enums: {}
+
+
+classes: 
+    AMPDatabaseHelper:
+        methods:
+            '-upgrade:newVersion:':
+                #trim_after_first_colon: true
+                name: upgrade$newVersion$
+            '-getEvents:limit:':
+                #trim_after_first_colon: true
+                name: getEvents$limit$
+            '-getIdentifys:limit:':
+                #trim_after_first_colon: true
+                name: getIdentifys$limit$
+            '-insertOrReplaceKeyValue:value:':
+                #trim_after_first_colon: true
+                name: insertOrReplaceKeyValue$value$
+            '-insertOrReplaceKeyLongValue:value:':
+                #trim_after_first_colon: true
+                name: insertOrReplaceKeyLongValue$value$
+    AMPDeviceInfo: {}
+    AMPIdentify:
+        methods:
+            '-add:value:':
+                #trim_after_first_colon: true
+                name: add$value$
+            '-append:value:':
+                #trim_after_first_colon: true
+                name: append$value$
+            '-prepend:value:':
+                #trim_after_first_colon: true
+                name: prepend$value$
+            '-set:value:':
+                #trim_after_first_colon: true
+                name: set$value$
+            '-setOnce:value:':
+                #trim_after_first_colon: true
+                name: setOnce$value$
+    AMPLocationManagerDelegate:
+        methods:
+            '-locationManager:didFailWithError:':
+                #trim_after_first_colon: true
+                name: locationManager$didFailWithError$
+            '-locationManager:didUpdateToLocation:fromLocation:':
+                #trim_after_first_colon: true
+                name: locationManager$didUpdateToLocation$fromLocation$
+            '-locationManager:didChangeAuthorizationStatus:':
+                #trim_after_first_colon: true
+                name: locationManager$didChangeAuthorizationStatus$
+    AMPRevenue: {}
+    AMPUtils: {}
+    Amplitude:
+        methods:
+            '-initializeApiKey:userId:':
+                #trim_after_first_colon: true
+                name: initializeApiKey$userId$
+            '-logEvent:withEventProperties:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$
+            '-logEvent:withEventProperties:outOfSession:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$outOfSession$
+            '-logEvent:withEventProperties:withGroups:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$withGroups$
+            '-logEvent:withEventProperties:withGroups:outOfSession:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$withGroups$outOfSession$
+            '-logEvent:withEventProperties:withGroups:withLongLongTimestamp:outOfSession:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$withGroups$withLongLongTimestamp$outOfSession$
+            '-logEvent:withEventProperties:withGroups:withTimestamp:outOfSession:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$withGroups$withTimestamp$outOfSession$
+            '-logRevenue:quantity:price:':
+                #trim_after_first_colon: true
+                name: logRevenue$quantity$price$
+            '-logRevenue:quantity:price:receipt:':
+                #trim_after_first_colon: true
+                name: logRevenue$quantity$price$receipt$
+            '-identify:outOfSession:':
+                #trim_after_first_colon: true
+                name: identify$outOfSession$
+            '-setUserProperties:replace:':
+                #trim_after_first_colon: true
+                name: setUserProperties$replace$
+            '-setGroup:groupName:':
+                #trim_after_first_colon: true
+                name: setGroup$groupName$
+            '-initializeApiKey:userId:startSession:':
+                #trim_after_first_colon: true
+                name: initializeApiKey$userId$startSession$
+            '+initializeApiKey:userId:':
+                #trim_after_first_colon: true
+                name: initializeApiKey$userId$
+            '+logEvent:withEventProperties:':
+                #trim_after_first_colon: true
+                name: logEvent$withEventProperties$
+            '+logRevenue:quantity:price:':
+                #trim_after_first_colon: true
+                name: logRevenue$quantity$price$
+            '+logRevenue:quantity:price:receipt:':
+                #trim_after_first_colon: true
+                name: logRevenue$quantity$price$receipt$
+
+
+protocols: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (GAD.*):
+        class: FIXME
+        name: 'Function__#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Value__#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Constant__#{g[0]}'

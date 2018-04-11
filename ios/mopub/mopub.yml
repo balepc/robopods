@@ -1,0 +1,281 @@
+package: com.mobidevelop.robovm.pods.mopub
+include: [foundation, uikit, storekit, corelocation, coregraphics]
+framework: MoPubSDKFramework
+clang_args: ['-x', 'objective-c']
+headers:
+    - MoPub.h
+typedefs: {}
+enums: 
+    MOPUBDisplayAgentType: {}
+    MPNativeAdOrientation: {prefix: MPNativeAdOrientation, first: MPNativeAdOrientationAny}
+    MPInterstitialCloseButtonStyle: {}
+    MPInterstitialOrientationType: {}
+    MPLogLevel: {prefix: MPLogLevel, first: MPLogLevelAll}
+    MPLogEventScribeCategory: {prefix: MPExchangeClientE}
+    MPLogEventNetworkType: {}
+    MPRewardedVideoAdErrorUnknown: {prefix: MPRewardedVideoAdError, first: MPRewardedVideoAdErrorUnknown}
+    MPViewabilityOption: {}
+    MPNativeAdErrorCode: {prefix: MPNativeAdError}
+
+
+classes:
+    MOPUBNativeVideoAdRenderer: {}
+    MOPUBNativeVideoAdRendererSettings: {}
+    MPAdConfigurationLogEventProperties: {}
+    MPAdConversionTracker: {}
+    MPAdPositioning: {}
+    MPAdView:
+        methods:
+            '-initWithAdUnitId:size:':
+                #trim_after_first_colon: true
+                name: initWithAdUnitId$size$
+    MPBannerCustomEvent:
+        methods:
+            '-requestAdWithSize:customEventInfo:':
+                #trim_after_first_colon: true
+                name: requestAdWithSize$customEventInfo$
+    MPClientAdPositioning: {}
+    MPAdConfiguration: {}
+    MPCollectionViewAdPlacer:
+        methods:
+            '-loadAdsForAdUnitID:targeting:':
+                #trim_after_first_colon: true
+                name: loadAdsForAdUnitID$targeting$
+            '+placerWithCollectionView:viewController:rendererConfigurations:':
+                #trim_after_first_colon: true
+                name: placerWithCollectionView$viewController$rendererConfigurations$
+            '+placerWithCollectionView:viewController:adPositioning:rendererConfigurations:':
+                #trim_after_first_colon: true
+                name: placerWithCollectionView$viewController$adPositioning$rendererConfigurations$
+    MPConstants: {}
+    MPIdentityProvider: {}
+    MPInterstitialAdController: {}
+    MPInterstitialCustomEvent: {}
+    MPLogEvent:
+        methods:
+            '-initWithEventCategory:eventName:':
+                #trim_after_first_colon: true
+                name: initWithEventCategory$eventName$
+    MPLogEventRecorder: {}
+    MPLogProvider:
+        methods:
+            '-logMessage:atLogLevel:':
+                #trim_after_first_colon: true
+                name: logMessage$atLogLevel$
+    MPNativeAd: {}
+    MPNativeAdRendererConfiguration: {}
+    MPNativeAdRenderingImageLoader:
+        methods:
+            '-loadImageForURL:intoImageView:':
+                #trim_after_first_colon: true
+                name: loadImageForURL$intoImageView$
+    MPNativeAdRequest:
+        methods:
+            '+requestWithAdUnitIdentifier:rendererConfigurations:':
+                #trim_after_first_colon: true
+                name: requestWithAdUnitIdentifier$rendererConfigurations$
+    MPNativeAdRequestTargeting: {}
+    MPNativeCustomEvent:
+        methods:
+            '-precacheImagesWithURLs:completionBlock:':
+                #trim_after_first_colon: true
+                name: precacheImagesWithURLs$completionBlock$
+    MPRewardedVideo:
+        methods:
+            '+loadRewardedVideoAdWithAdUnitID:withMediationSettings:':
+                #trim_after_first_colon: true
+                name: loadRewardedVideoAdWithAdUnitID$withMediationSettings$
+            '+loadRewardedVideoAdWithAdUnitID:keywords:location:mediationSettings:':
+                #trim_after_first_colon: true
+                name: loadRewardedVideoAdWithAdUnitID$keywords$location$mediationSettings$
+            '+loadRewardedVideoAdWithAdUnitID:keywords:location:customerId:mediationSettings:':
+                #trim_after_first_colon: true
+                name: loadRewardedVideoAdWithAdUnitID$keywords$location$customerId$mediationSettings$
+            '+presentRewardedVideoAdForAdUnitID:fromViewController:withReward:':
+                #trim_after_first_colon: true
+                name: presentRewardedVideoAdForAdUnitID$fromViewController$withReward$
+            '+presentRewardedVideoAdForAdUnitID:fromViewController:withReward:customData:':
+                #trim_after_first_colon: true
+                name: presentRewardedVideoAdForAdUnitID$fromViewController$withReward$customData$
+            '+presentRewardedVideoAdForAdUnitID:fromViewController:':
+                #trim_after_first_colon: true
+                name: presentRewardedVideoAdForAdUnitID$fromViewController$
+    MPRewardedVideoCustomEvent: 
+        methods:
+            '+setCachedInitializationParameters:forNetwork:':
+                #trim_after_first_colon: true
+                name: setCachedInitializationParameters$forNetwork$
+
+    MPRewardedVideoReward:
+        methods:
+            '-initWithCurrencyType:amount:':
+                #trim_after_first_colon: true
+                name: initWithCurrencyType$amount$
+    MPServerAdPositioning: {}
+    MPStaticNativeAdRenderer: {}
+    MPStaticNativeAdRendererSettings: {}
+    MPStreamAdPlacer:
+        methods:
+            '-setItemCount:forSection:':
+                #trim_after_first_colon: true
+                name: setItemCount$forSection$
+            '-renderAdAtIndexPath:inView:':
+                #trim_after_first_colon: true
+                name: renderAdAtIndexPath$inView$
+            '-sizeForAdAtIndexPath:withMaximumWidth:':
+                #trim_after_first_colon: true
+                name: sizeForAdAtIndexPath$withMaximumWidth$
+            '-loadAdsForAdUnitID:targeting:':
+                #trim_after_first_colon: true
+                name: loadAdsForAdUnitID$targeting$
+            '-adjustedNumberOfItems:inSection:':
+                #trim_after_first_colon: true
+                name: adjustedNumberOfItems$inSection$
+            '-moveItemAtIndexPath:toIndexPath:':
+                #trim_after_first_colon: true
+                name: moveItemAtIndexPath$toIndexPath$
+            '-moveSection:toSection:':
+                #trim_after_first_colon: true
+                name: moveSection$toSection$
+            '+placerWithViewController:adPositioning:rendererConfigurations:':
+                #trim_after_first_colon: true
+                name: placerWithViewController$adPositioning$rendererConfigurations$
+    MPTableViewAdPlacer:
+        methods:
+            '-loadAdsForAdUnitID:targeting:':
+                #trim_after_first_colon: true
+                name: loadAdsForAdUnitID$targeting$
+            '+placerWithTableView:viewController:rendererConfigurations:':
+                #trim_after_first_colon: true
+                name: placerWithTableView$viewController$rendererConfigurations$
+            '+placerWithTableView:viewController:adPositioning:rendererConfigurations:':
+                #trim_after_first_colon: true
+                name: placerWithTableView$viewController$adPositioning$rendererConfigurations$
+    MPTelephoneConfirmationController:
+        methods:
+            '-initWithURL:clickHandler:':
+                #trim_after_first_colon: true
+                name: initWithURL$clickHandler$
+    MoPub:
+        methods:
+            '-initializeRewardedVideoWithGlobalMediationSettings:delegate:':
+                #trim_after_first_colon: true
+                name: initializeRewardedVideoWithGlobalMediationSettings$delegate$
+            '-initializeRewardedVideoWithGlobalMediationSettings:delegate:networkInitializationOrder:':
+                #trim_after_first_colon: true
+                name: initializeRewardedVideoWithGlobalMediationSettings$delegate$networkInitializationOrder$
+
+
+
+
+
+
+protocols: 
+    MPAdAlertManagerProtocol: {}
+    MPAdViewDelegate: {}
+    MPBannerCustomEventDelegate:
+        methods:
+            '-bannerCustomEvent:didLoadAd:':
+                #trim_after_first_colon: true
+                name: bannerCustomEvent$didLoadAd$
+            '-bannerCustomEvent:didFailToLoadAdWithError:':
+                #trim_after_first_colon: true
+                name: bannerCustomEvent$didFailToLoadAdWithError$
+    MPCollectionViewAdPlacerDelegate: {}
+    MPInterstitialAdControllerDelegate: {}
+    MPInterstitialCustomEventDelegate:
+        methods:
+            '-interstitialCustomEvent:didLoadAd:':
+                #trim_after_first_colon: true
+                name: interstitialCustomEvent$didLoadAd$
+            '-interstitialCustomEvent:didFailToLoadAdWithError:':
+                #trim_after_first_colon: true
+                name: interstitialCustomEvent$didFailToLoadAdWithError$
+    MPLogger: {}
+    MPMediationSettingsProtocol: {}
+    MPNativeAdAdapter:
+        methods:
+            '-displayContentForURL:rootViewController:':
+                #trim_after_first_colon: true
+                name: displayContentForURL$rootViewController$
+            '-willAttachToView:withAdContentViews:':
+                #trim_after_first_colon: true
+                name: willAttachToView$withAdContentViews$
+    MPNativeAdAdapterDelegate: {}
+    MPNativeAdDelegate: {}
+    MPNativeAdRenderer:
+        methods:
+            '-retrieveViewWithAdapter:error:':
+                #trim_after_first_colon: true
+                name: retrieveViewWithAdapter$error$
+    MPNativeAdRendererSettings: {}
+    MPNativeAdRendering:
+        methods:
+            '-layoutCustomAssetsWithProperties:imageLoader:':
+                #trim_after_first_colon: true
+                name: layoutCustomAssetsWithProperties$imageLoader$
+    MPNativeCustomEventDelegate:
+        methods:
+            '-nativeCustomEvent:didLoadAd:':
+                #trim_after_first_colon: true
+                name: nativeCustomEvent$didLoadAd$
+            '-nativeCustomEvent:didFailToLoadAdWithError:':
+                #trim_after_first_colon: true
+                name: nativeCustomEvent$didFailToLoadAdWithError$
+    MPRewardedVideoCustomEventDelegate:
+        methods:
+            '-rewardedVideoDidFailToLoadAdForCustomEvent:error:':
+                #trim_after_first_colon: true
+                name: rewardedVideoDidFailToLoadAdForCustomEvent$error$
+            '-rewardedVideoDidFailToPlayForCustomEvent:error:':
+                #trim_after_first_colon: true
+                name: rewardedVideoDidFailToPlayForCustomEvent$error$
+            '-rewardedVideoShouldRewardUserForCustomEvent:reward:':
+                #trim_after_first_colon: true
+                name: rewardedVideoShouldRewardUserForCustomEvent$reward$
+    MPRewardedVideoDelegate:
+        methods:
+            '-rewardedVideoAdDidFailToLoadForAdUnitID:error:':
+                #trim_after_first_colon: true
+                name: rewardedVideoAdDidFailToLoadForAdUnitID$error$
+            '-rewardedVideoAdDidFailToPlayForAdUnitID:error:':
+                #trim_after_first_colon: true
+                name: rewardedVideoAdDidFailToPlayForAdUnitID$error$
+            '-rewardedVideoAdShouldRewardForAdUnitID:reward:':
+                #trim_after_first_colon: true
+                name: rewardedVideoAdShouldRewardForAdUnitID$reward$
+    MPStreamAdPlacerDelegate:
+        methods:
+            '-adPlacer:didLoadAdAtIndexPath:':
+                #trim_after_first_colon: true
+                name: adPlacer$didLoadAdAtIndexPath$
+            '-adPlacer:didRemoveAdsAtIndexPaths:':
+                #trim_after_first_colon: true
+                name: adPlacer$didRemoveAdsAtIndexPaths$
+    MPTableViewAdPlacerDelegate: {}
+    MPViewabilityAdapter:
+        methods:
+            '-initWithAdView:isVideo:startTrackingImmediately:':
+                #trim_after_first_colon: true
+                name: initWithAdView$isVideo$startTrackingImmediately$
+
+
+    
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (GAD.*):
+        class: FIXME
+        name: 'Function__#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Value__#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Constant__#{g[0]}'

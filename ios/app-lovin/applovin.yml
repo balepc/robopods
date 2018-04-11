@@ -1,0 +1,246 @@
+package: com.mobidevelop.robovm.pods.applovin
+include: [foundation, uikit, corelocation]
+framework: AppLovinSDK
+clang_args: ['-x', 'objective-c']
+headers: 
+   - AppLovinSDK.h
+typedefs: {}
+enums: 
+    ALAdViewDisplayErrorCode: {}
+
+
+classes: 
+    ALAd: {}
+    ALAdService:
+        methods:
+            '-loadNextAd:andNotify:':
+                #trim_after_first_colon: true
+                name: loadNextAd$andNotify$
+            '-loadNextAdForZoneIdentifier:andNotify:':
+                #trim_after_first_colon: true
+                name: loadNextAdForZoneIdentifier$andNotify$
+            '-addAdUpdateObserver:ofSize:':
+                #trim_after_first_colon: true
+                name: addAdUpdateObserver$ofSize$
+            '-removeAdUpdateObserver:ofSize:':
+                #trim_after_first_colon: true
+                name: removeAdUpdateObserver$ofSize$
+            '-loadNextAdForAdToken:andNotify:':
+                #trim_after_first_colon: true
+                name: loadNextAdForAdToken$andNotify$
+            '-loadNextAdForZoneIdentifiers:andNotify:':
+                #trim_after_first_colon: true
+                name: loadNextAdForZoneIdentifiers$andNotify$
+
+    ALAdSize: 
+        methods:
+            '+sizeWithLabel:orDefault:':
+                #trim_after_first_colon: true
+                name: sizeWithLabel$orDefault$
+    ALAdType: {}
+    ALAdView:
+        methods:
+            '-render:overPlacement:':
+                #trim_after_first_colon: true
+                name: render$overPlacement$
+    ALEventService:
+        methods:
+            '-trackEvent:parameters:':
+                #trim_after_first_colon: true
+                name: trackEvent$parameters$
+            '-trackInAppPurchaseWithTransactionIdentifier:parameters:':
+                #trim_after_first_colon: true
+                name: trackInAppPurchaseWithTransactionIdentifier$parameters$
+            '-trackCheckoutWithTransactionIdentifier:parameters:':
+                #trim_after_first_colon: true
+                name: trackCheckoutWithTransactionIdentifier$parameters$
+    ALIncentivizedInterstitialAd:
+        methods:
+            '-initWithZoneIdentifier:sdk:':
+                #trim_after_first_colon: true
+                name: initWithZoneIdentifier$sdk$
+            '-showOver:andNotify:':
+                #trim_after_first_colon: true
+                name: showOver$andNotify$
+            '-showOver:renderAd:andNotify:':
+                #trim_after_first_colon: true
+                name: showOver$renderAd$andNotify$
+            '+showOver:andNotify:':
+                #trim_after_first_colon: true
+                name: showOver$andNotify$
+            '-showOver:placement:andNotify:':
+                #trim_after_first_colon: true
+                name: showOver$placement$andNotify$
+            '+showOverPlacement:andNotify:':
+                #trim_after_first_colon: true
+                name: showOverPlacement$andNotify$
+            '+showOver:placement:andNotify:':
+                #trim_after_first_colon: true
+                name: showOver$placement$andNotify$
+    ALInterstitialAd:
+        methods:
+            '-showOver:andRender:':
+                #trim_after_first_colon: true
+                name: showOver$andRender$
+            '-initWithFrame:sdk:':
+                #trim_after_first_colon: true
+                name: initWithFrame$sdk$
+            '-showOver:placement:andRender:':
+                #trim_after_first_colon: true
+                name: showOver$placement$andRender$
+            '+showOver:placement:':
+                #trim_after_first_colon: true
+                name: showOver$placement$
+    ALNativeAd:
+        methods:
+            '-videoEndTrackingURL:firstPlay:':
+                #trim_after_first_colon: true
+                name: videoEndTrackingURL$firstPlay$
+    ALNativeAdService:
+        methods:
+            '-loadNativeAdGroupOfCount:andNotify:':
+                #trim_after_first_colon: true
+                name: loadNativeAdGroupOfCount$andNotify$
+            '-loadNativeAdGroupOfCount:forZoneIdentifier:andNotify:':
+                #trim_after_first_colon: true
+                name: loadNativeAdGroupOfCount$forZoneIdentifier$andNotify$
+            '-precacheResourcesForNativeAd:andNotify:':
+                #trim_after_first_colon: true
+                name: precacheResourcesForNativeAd$andNotify$
+    ALPostbackService:
+        methods:
+            '-dispatchPostbackAsync:andNotify:':
+                #trim_after_first_colon: true
+                name: dispatchPostbackAsync$andNotify$
+    ALSdk:
+        methods:
+            '+sharedWithKey:settings:':
+                #trim_after_first_colon: true
+                name: sharedWithKey$settings$
+    ALSdkSettings: {}
+
+
+protocols: 
+    ALAdDisplayDelegate:
+        methods:
+            '-ad:wasDisplayedIn:':
+                #trim_after_first_colon: true
+                name: ad$wasDisplayedIn$
+            '-ad:wasHiddenIn:':
+                #trim_after_first_colon: true
+                name: ad$wasHiddenIn$
+            '-ad:wasClickedIn:':
+                #trim_after_first_colon: true
+                name: ad$wasClickedIn$
+    ALAdLoadDelegate:
+        methods:
+            '-adService:didLoadAd:':
+                #trim_after_first_colon: true
+                name: adService$didLoadAd$
+            '-adService:didFailToLoadAdWithError:':
+                #trim_after_first_colon: true
+                name: adService$didFailToLoadAdWithError$
+    ALAdRewardDelegate:
+        methods:
+            '-rewardValidationRequestForAd:didSucceedWithResponse:':
+                #trim_after_first_colon: true
+                name: rewardValidationRequestForAd$didSucceedWithResponse$
+            '-rewardValidationRequestForAd:didExceedQuotaWithResponse:':
+                #trim_after_first_colon: true
+                name: rewardValidationRequestForAd$didExceedQuotaWithResponse$
+            '-rewardValidationRequestForAd:wasRejectedWithResponse:':
+                #trim_after_first_colon: true
+                name: rewardValidationRequestForAd$wasRejectedWithResponse$
+            '-rewardValidationRequestForAd:didFailWithError:':
+                #trim_after_first_colon: true
+                name: rewardValidationRequestForAd$didFailWithError$
+    ALAdUpdateObserver:
+        methods:
+            '-adService:didUpdateAd:':
+                #trim_after_first_colon: true
+                name: adService$didUpdateAd$
+    ALAdVideoPlaybackDelegate:
+        methods:
+            '-videoPlaybackEndedInAd:atPlaybackPercent:fullyWatched:':
+                #trim_after_first_colon: true
+                name: videoPlaybackEndedInAd$atPlaybackPercent$fullyWatched$
+    ALAdViewEventDelegate:
+        methods:
+            '-ad:didPresentFullscreenForAdView:':
+                #trim_after_first_colon: true
+                name: ad$didPresentFullscreenForAdView$
+            '-ad:willDismissFullscreenForAdView:':
+                #trim_after_first_colon: true
+                name: ad$willDismissFullscreenForAdView$
+            '-ad:didDismissFullscreenForAdView:':
+                #trim_after_first_colon: true
+                name: ad$didDismissFullscreenForAdView$
+            '-ad:willLeaveApplicationForAdView:':
+                #trim_after_first_colon: true
+                name: ad$willLeaveApplicationForAdView$
+            '-ad:didReturnToApplicationForAdView:':
+                #trim_after_first_colon: true
+                name: ad$didReturnToApplicationForAdView$
+            '-ad:didFailToDisplayInAdView:withError:':
+                #trim_after_first_colon: true
+                name: ad$didFailToDisplayInAdView$withError$
+    ALAdViewProtocol:
+        methods:
+            '-initWithSize:zoneIdentifier:':
+                #trim_after_first_colon: true
+                name: initWithSize$zoneIdentifier$
+            '-initWithSdk:size:':
+                #trim_after_first_colon: true
+                name: initWithSdk$size$
+            '-initWithFrame:size:sdk:':
+                #trim_after_first_colon: true
+                name: initWithFrame$size$sdk$
+    ALNativeAdLoadDelegate:
+        methods:
+            '-nativeAdService:didLoadAds:':
+                #trim_after_first_colon: true
+                name: nativeAdService$didLoadAds$
+            '-nativeAdService:didFailToLoadAdsWithError:':
+                #trim_after_first_colon: true
+                name: nativeAdService$didFailToLoadAdsWithError$
+    ALNativeAdPrecacheDelegate:
+        methods:
+            '-nativeAdService:didPrecacheImagesForAd:':
+                #trim_after_first_colon: true
+                name: nativeAdService$didPrecacheImagesForAd$
+            '-nativeAdService:didPrecacheVideoForAd:':
+                #trim_after_first_colon: true
+                name: nativeAdService$didPrecacheVideoForAd$
+            '-nativeAdService:didFailToPrecacheImagesForAd:withError:':
+                #trim_after_first_colon: true
+                name: nativeAdService$didFailToPrecacheImagesForAd$withError$
+            '-nativeAdService:didFailToPrecacheVideoForAd:withError:':
+                #trim_after_first_colon: true
+                name: nativeAdService$didFailToPrecacheVideoForAd$withError$
+    ALPostbackDelegate:
+        methods:
+            '-postbackService:didExecutePostback:':
+                #trim_after_first_colon: true
+                name: postbackService$didExecutePostback$
+            '-postbackService:didFailToExecutePostback:errorCode:':
+                #trim_after_first_colon: true
+                name: postbackService$didFailToExecutePostback$errorCode$
+
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (GAD.*):
+        class: FIXME
+        name: 'Function__#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Value__#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Constant__#{g[0]}'

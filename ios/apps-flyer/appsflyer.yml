@@ -1,0 +1,87 @@
+package: com.mobidevelop.robovm.pods.appsflyer
+include: [foundation, uikit, storekit]
+framework: AppsFlyerLib
+clang_args: ['-x', 'objective-c']
+headers:
+    - AppsFlyerTracker.h
+    - AppsFlyerLinkGenerator.h
+    - AppsFlyerShareInviteHelper.h
+    - AppsFlyerCrossPromotionHelper.h
+typedefs: {}
+enums: 
+    EmailCryptType: {prefix: EmailCryptType, first: EmailCryptTypeNone}
+classes: 
+    AppsFlyerCrossPromotionHelper:
+        methods:
+            '+trackCrossPromoteImpression:campaign:':
+                #trim_after_first_colon: true
+                name: trackCrossPromoteImpressionCampaign
+            '+trackAndOpenStore:campaign:paramters:openStore:':
+                #trim_after_first_colon: true
+                name: trackAndOpenStoreCampaignParamtersOpenStore
+    AppsFlyerLinkGenerator:
+        methods:
+            '-addParameterValue:forKey:':
+                #trim_after_first_colon: true
+                name: addParameterValueForKey
+    AppsFlyerShareInviteHelper:
+        methods:
+            '+generateInviteUrlWithLinkGenerator:completionHandler:':
+                #trim_after_first_colon: true
+                name: generateInviteUrlWithLinkGeneratorCompletionHandler
+            '+trackInvite:parameters:':
+                #trim_after_first_colon: true
+                name: trackInviteParameters
+    AppsFlyerTracker:
+        methods:
+            '-setUserEmails:withCryptType:':
+                #trim_after_first_colon: true
+                name: setUserEmailsWithCryptType
+            '-trackEvent:withValue:':
+                #trim_after_first_colon: true
+                name: trackEventWithValue
+            '-trackEvent:withValues:':
+                #trim_after_first_colon: true
+                name: trackEventWithValues
+            '-validateAndTrackInAppPurchase:price:currency:transactionId:additionalParameters:success:failure:':
+                #trim_after_first_colon: true
+                name: validateAndTrackInAppPurchase
+            '-trackLocation:latitude:':
+                #trim_after_first_colon: true
+                name: trackLocation
+            '-handleOpenURL:sourceApplication:':
+                #trim_after_first_colon: true
+                name: handleOpenURLSourceApplication
+            '-handleOpenURL:sourceApplication:withAnnotation:':
+                #trim_after_first_colon: true
+                name: handleOpenURLSourceApplicationWithAnnotation
+            '-handleOpenUrl:options:':
+                #trim_after_first_colon: true
+                name: handleOpenUrl
+            '-continueUserActivity:restorationHandler:':
+                #trim_after_first_colon: true
+                name: continueUserActivity
+
+
+
+protocols: 
+    AppsFlyerTrackerDelegate: {}
+
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (GAD.*):
+        class: FIXME
+        name: 'Function__#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Value__#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Constant__#{g[0]}'

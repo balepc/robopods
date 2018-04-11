@@ -1,0 +1,68 @@
+package: com.mobidevelop.robovm.pods.gameanalytics
+include: [foundation]
+framework: GameAnalytics
+clang_args: ['-x', 'objective-c']
+headers:
+    - GameAnalytics.h
+typedefs: {}
+
+
+enums: 
+    GAResourceFlowType: {}
+    GAProgressionStatus: {}
+    GAErrorSeverity: {}
+
+
+classes:
+# classes to be updated:
+classes:
+    GameAnalytics:
+        methods:
+            '+configureGameKey:gameSecret:':
+                #trim_after_first_colon: true
+                name: configureGameKey
+            '+initializeWithGameKey:gameSecret:':
+                #trim_after_first_colon: true
+                name: initializeWithGameKey
+            '+addBusinessEventWithCurrency:amount:itemType:itemId:cartType:receipt:':
+                #trim_after_first_colon: true
+                name: addBusinessEventWithCurrency
+            '+addBusinessEventWithCurrency:amount:itemType:itemId:cartType:autoFetchReceipt:':
+                #trim_after_first_colon: true
+                name: addBusinessEventWithCurrency
+            '+addResourceEventWithFlowType:currency:amount:itemType:itemId:':
+                #trim_after_first_colon: true
+                name: addResourceEventWithFlowType
+            '+addProgressionEventWithProgressionStatus:progression01:progression02:progression03:':
+                #trim_after_first_colon: true
+                name: addProgressionEventWithProgressionStatus
+            '+addProgressionEventWithProgressionStatus:progression01:progression02:progression03:score:':
+                #trim_after_first_colon: true
+                name: addProgressionEventWithProgressionStatus
+            '+addDesignEventWithEventId:value:':
+                #trim_after_first_colon: true
+                name: addDesignEventWithEventId
+            '+addErrorEventWithSeverity:message:':
+                #trim_after_first_colon: true
+                name: addErrorEventWithSeverity
+
+
+protocols: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (GAD.*):
+        class: FIXME
+        name: 'Function__#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Value__#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    k?(GAD.*):
+        class: FIXME
+        name: 'Constant__#{g[0]}'
